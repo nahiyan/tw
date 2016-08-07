@@ -1,0 +1,1 @@
+javascript:var script = document.createElement('script');script.src = 'https://raw.githubusercontent.com/nahiyan/tw/master/build/js/incoming_res-min.js';script.type = 'text/javascript';var head = document.getElementsByTagName("head")[0];head.appendChild(script);
