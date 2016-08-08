@@ -1,1 +1,1 @@
-javascript:var script = document.createElement('script');script.src = 'https://cdn.rawgit.com/nahiyan/tw/master/build/js/market-min.js';script.type = 'text/javascript';var head = document.getElementsByTagName("head")[0];head.appendChild(script);
+javascript:var script = document.createElement('script');script.src = 'https://rawgit.com/nahiyan/tw/master/build/js/market-min.js';script.type = 'text/javascript';var head = document.getElementsByTagName("head")[0];head.appendChild(script);
