@@ -19,7 +19,7 @@ if (window.location.href.indexOf("screen=overview") !== -1) {
 	var innerhtml = "";
 	for (key in villages) {
 		fields = round(distance(main_village, [villages[key].x, villages[key].y]), 1);
-		innerhtml += "<a href='"+window.location.href.replace('overview', 'place')+"&target="+villages[key].id+"&light=1'>"+villages[key].x+'|'+villages[key].y+" "+fields+" fields away</a><br/>";
+		innerhtml += "<a href='"+window.location.href.replace('screen=overview_villages', 'place').replace('screen=overview', 'place')+"&target="+villages[key].id+"&light=1'>"+villages[key].x+'|'+villages[key].y+" "+fields+" fields away</a><br/>";
 	}
 
 	infobox.innerHTML = innerhtml;
