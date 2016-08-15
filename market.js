@@ -25,7 +25,7 @@ infobox.className = "info_box";
 infobox.innerHTML = "Monitoring market, minimize this window and enjoy but don't open new tab here.";
 var count = 0;
 
-if (window.location.href.indexOf("mode=exchange") === -1) {
+if (window.location.href.indexOf("screen=market&mode=exchange") === -1) {
 	alert("You need to be in the Premium exchange section of the market");
 } else {
 	beep();
@@ -37,7 +37,7 @@ if (window.location.href.indexOf("mode=exchange") === -1) {
 			document.querySelector("input.premium-exchange-input[data-resource = 'stone']").value = round_up(clay, clay_rate);
 		} else if (event.keyCode == 69) { // e
 			document.querySelector("input.premium-exchange-input[data-resource = 'iron']").value = round_up(iron, iron_rate);
-		} else if (event.keyCode = 82) {
+		} else if (event.keyCode == 82) { // r
 			document.querySelector("input.premium-exchange-input[data-resource = 'wood']").value = 0;
 			document.querySelector("input.premium-exchange-input[data-resource = 'stone']").value = 0;
 			document.querySelector("input.premium-exchange-input[data-resource = 'iron']").value = 0;
