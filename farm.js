@@ -17,9 +17,11 @@ infobox.className = "info_box";
 if (window.location.href.indexOf("screen=overview") !== -1) {
 	var fields = 0;
 	var innerhtml = "";
+	var counter;
 	for (key in villages) {
 		fields = round(distance(main_village, [villages[key].x, villages[key].y]), 1);
-		innerhtml += "<a href='"+window.location.href.replace('screen=overview', 'place')+"&target="+villages[key].id+"&light=1'>"+villages[key].x+'|'+villages[key].y+" "+fields+" fields away</a><br/>";
+		innerhtml += "<a href='"+window.location.href.replace('screen=overview', 'screen=place')+"&target="+villages[key].id+"&light=1'>"+counter+". "+villages[key].x+'|'+villages[key].y+" "+fields+" fields away</a><br/>";
+		counter++;
 	}
 
 	infobox.innerHTML = innerhtml;
