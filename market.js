@@ -29,7 +29,7 @@ if (window.location.href.indexOf("screen=market&mode=exchange") === -1) {
 	alert("You need to be in the Premium exchange section of the market");
 } else {
 	beep();
-	document.querySelector('#units_help').parentNode.insertBefore(infobox, document.querySelector('#units_help'));
+	document.querySelector('#contentContainer').parentNode.insertBefore(infobox, document.querySelector('#contentContainer'));
 	document.addEventListener('keyup', function (event) {
 		if (event.keyCode == 81) { // q
 			document.querySelector("input.premium-exchange-input[data-resource = 'wood']").value = round_up(wood, wood_rate);
