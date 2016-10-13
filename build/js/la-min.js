@@ -1,0 +1,1 @@
+"use strict";var l=document.getElementById("plunder_list").querySelectorAll("tbody tr"),x=0,aButtons=[];l.forEach(function(t){if(0!==x){var e=parseFloat(t.querySelectorAll("td")[7].innerHTML);if(!(e<=20))return 0;aButtons[x]=t.querySelectorAll("td")[8].querySelector("a")}x++});var counter=1,i=setInterval(function(){var t=aButtons[counter];t.click(),counter++},300);
