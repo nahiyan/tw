@@ -6,6 +6,7 @@ function beep() {
 }
 
 var l = document.getElementById('plunder_list').querySelectorAll('tbody tr');
+l = [].slice.call(l);
 
 var x = 0;
 var aButtons = [];
@@ -27,7 +28,10 @@ var i = setInterval(function () {
 	aButton.click();
 	counter++;
 
-	if (counter > aButtons.length) {
+	if (counter >= aButtons.length) {
 		beep();
+		beep();
+		beep();
+		clearInterval(i);
 	}
-}, 300);
+}, 250);
