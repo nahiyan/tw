@@ -30,8 +30,6 @@ var i = setInterval(function () {
 
 	if (counter >= aButtons.length) {
 		beep();
-		beep();
-		beep();
 		clearInterval(i);
 	}
 }, 250);
