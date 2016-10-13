@@ -15,7 +15,6 @@ l.forEach(function (li) {
 		if (distance <= 20) {
 			aButtons[x] = li.querySelectorAll('td')[8].querySelector('a');
 		} else {
-			beep();
 			return 0;
 		}
 	}
@@ -27,4 +26,8 @@ var i = setInterval(function () {
 	var aButton = aButtons[counter];
 	aButton.click();
 	counter++;
+
+	if (counter > aButtons.length) {
+		beep();
+	}
 }, 300);
