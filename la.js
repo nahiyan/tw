@@ -32,4 +32,4 @@ var i = setInterval(function () {
 		beep();
 		clearInterval(i);
 	}
-}, 250);
+}, 210);
