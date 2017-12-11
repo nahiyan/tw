@@ -6,25 +6,26 @@ function beep() {
 }
 
 var l = document.getElementById('plunder_list').querySelectorAll('tbody tr');
-l = [].slice.call(l);
 
 var x = 0;
 var aButtons = [];
-l.forEach(function (li) {
-	if (x !== 0) {
-		var distance = parseFloat(li.querySelectorAll('td')[7].innerHTML);
-		if (distance <= 20) {
-			aButtons[x] = li.querySelectorAll('td')[8].querySelector('a');
-		} else {
-			return 0;
+while(x < l.length) {
+	var currentRow = l[x];
+	if (currentRow.getAttribute('id') !== undefined) {
+		if (x >= 2) {
+			var distance = parseFloat(currentRow.querySelectorAll('td')[7].innerHTML);
+			if (distance <= 20)
+				aButtons.push(currentRow.querySelectorAll('td')[8].querySelector('a'));
 		}
-	}
-	x++;
-});
 
-var counter = 1;
+		x++;
+	}
+}
+
+var counter = 0;
 var i = setInterval(function () {
 	var aButton = aButtons[counter];
+
 	aButton.click();
 	counter++;
 
@@ -32,4 +33,4 @@ var i = setInterval(function () {
 		beep();
 		clearInterval(i);
 	}
-}, 210);
+}, 300);
