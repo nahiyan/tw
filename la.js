@@ -13,9 +13,7 @@ while(x < l.length) {
 	var currentRow = l[x];
 	if (currentRow.getAttribute('id') !== undefined) {
 		if (x >= 2) {
-			var distance = parseFloat(currentRow.querySelectorAll('td')[7].innerHTML);
-			if (distance <= 20)
-				aButtons.push(currentRow.querySelectorAll('td')[8].querySelector('a'));
+			aButtons.push(currentRow.querySelectorAll('td')[8].querySelector('a'));
 		}
 
 		x++;
