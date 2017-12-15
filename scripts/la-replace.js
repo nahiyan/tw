@@ -1,0 +1,1 @@
+javascript:var script = document.createElement('script');script.src = 'https://rawgit.com/nahiyan/tw/master/build/js/la-replace-min.js?cachebuster=' + new Date().getTime();script.type = 'text/javascript';var head = document.getElementsByTagName("head")[0];head.appendChild(script);
